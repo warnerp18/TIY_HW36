@@ -1,31 +1,17 @@
-var testOCR = function(){
-	// var testImage = new Image();
-	// testImage.src = '../test.png';
+var testing = function() {
+    console.log("hi")
+    var testImage = new Image();
+    testImage.src = '../image.png';
 
-	// var canvas = document.createElement("canvas");
-	// canvas.width = 411;
-	// canvas.height = 101;
-	// var context = canvas.getContext('2d');
-	// testImage.onload = function() {
-	// 	context.drawImage(testImage, 0, 0);
-	// }
-	// var string = OCRAD(canvas);
-	// console.log(string);
+    var canvas = document.createElement("canvas");
+    canvas.width = 287;
+    canvas.height = 382;
+    var context = canvas.getContext('2d');
+    testImage.onload = function() {
+        context.drawImage(testImage, 0, 0);
+        var string = OCRAD(canvas);
+        console.log(string);
+    }
+};
 
-	var canvas = document.getElementById('myCanvas');
-	var context = canvas.getContext('2d');
-	var testImage = new Image()
-	testImage.src = '../test.png';
-
-	testImage.onload = function() {
-		context.drawImage(testImage, 0, 0);
-	}
-
-
-	var string = OCRAD(canvas)
-
-
-	console.log(string)
-}
-
-testOCR();
+testing()
