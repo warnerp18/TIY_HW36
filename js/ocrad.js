@@ -8079,4 +8079,8 @@ return OCRAD;
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = OCRAD;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master
