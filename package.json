@@ -31,5 +31,9 @@
     "method-override": "^2.3.0",
     "request": "^2.47.0",
     "twilio": "^1.7.0"
+  },
+    "engines": {
+    "node": ">=0.8.0",
+    "npm": "1.1.x"
   }
 }
