@@ -9,6 +9,7 @@ window.onload = app;
             {url: "./bower_components/backbone/backbone.js"},
             {url: "./bower_components/pathjs/path.min.js"},
             {url: "./bower_components/foundation/js/foundation.js"},
+            {url: "./findName.js"},
             {url: "./js/ocrad.js"},
             {url: "./js/testOCR.js"},
             {url: "./TwilioTest.js"},
