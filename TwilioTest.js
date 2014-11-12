@@ -11,3 +11,5 @@ client.messages.create({
 	console.log(err, message)
     // process.stdout.write(message.sid);
 });
+
+//node TwilioTest.js into Terminal to send text

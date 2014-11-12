@@ -1,6 +1,4 @@
-
-    window.onload = app;
-
+window.onload = app;
     // runs when the DOM is loaded
     function app(){
 
@@ -12,8 +10,9 @@
             {url: "./bower_components/pathjs/path.min.js"},
             {url: "./js/ocrad.js"},
             {url: "./js/testOCR.js"},
-            {url: "./js/TwilioTest.js"},
-            {url: "./js/stuff.js"}
+            {url: "./TwilioTest.js"},
+            {url: "./stuff.js"},
+            {url: "./findName.js"}
         ).then(function(){
             _.templateSettings.interpolate = /{([\s\S]+?)}/g;
 

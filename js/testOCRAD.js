@@ -2,6 +2,8 @@ var testing = function() {
     console.log("hi")
     var testImage = new Image();
     testImage.src = '../image.png';
+    testImage.src = '../test.png';
+
 
     var canvas = document.createElement("canvas");
     canvas.width = 287;
