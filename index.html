@@ -4,12 +4,42 @@
         <link rel="stylesheet" type="text/css" href="./bower_components/normalize.css/normalize.css">
         <link rel="stylesheet" type="text/css" href="./bower_components/typeplate-starter-kit/css/typeplate.css">
         <link rel="stylesheet" type="text/css" href="./bower_components/foundation/css/foundation.css">
-        <title></title>
+        <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+        <title>ParcelExpress!</title>
     </head>
     <body>
-        <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
+    <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
+    
         
-    <a id="send" class="button">Send SMS</a>
+    <!-- <a href="/TwilioTest/hello" id="send" class="button">Send SMS</a> -->
+    <a href="#" id="send" class="button">Send SMS</a>
+
+    <form>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>First Name
+        <input name="firstName" type="text" placeholder="large-12.columns" />
+      </label>
+    </div>
+  </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <label>Last Name
+                <input name="lastName" type="text" placeholder="large-12.columns" />
+            </label>
+        </div>
+  </div>
+    <div class="row">
+        <div class="large-12 columns">
+          <label>Address
+            <input name="address" type="text" placeholder="large-12.columns" />
+          </label>
+        </div>
+    </div>
+
+
+</form>
+
 
     <canvas id="myCanvas" width="411" height="101"></canvas>
     </body>

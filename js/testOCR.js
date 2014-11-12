@@ -25,4 +25,7 @@ var testOCR = function(){
 	// }
 }
 
-testOCR();
+// testOCR();
+
+// $('#send').on('click', node TwilioTest.js);
+

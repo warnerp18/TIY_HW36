@@ -11,15 +11,23 @@ function startServer() {
         request = require('request'),
         _ = require('lodash');
 
-    function querify(queryParamsObject){
-        return '?'+_.map(queryParamsObject || {}, function(val, key){
-            return key+'='+val
+    /**
+     * LOAD TWILIO STUFF
+     */
+    var twilio = require("./node_modules/twilio");
+    var accountData = require("./stuff.js").data;
+    var client = twilio(accountData.sid, accountData.authToken);
+    ////////
+
+    function querify(queryParamsObject) {
+        return '?' + _.map(queryParamsObject || {}, function(val, key) {
+            return key + '=' + val
         }).join('&');
     }
 
     // adds a new rule to proxy a localUrl -> webUrl
     // i.e. proxify ('/my/server/google', 'http://google.com/')
-    function proxify(localUrl, webUrl){
+    function proxify(localUrl, webUrl) {
         app.get(localUrl, function(req, res) {
             var url = [
                 webUrl,
@@ -29,6 +37,23 @@ function startServer() {
             req.pipe(request(url)).pipe(res);
         });
     }
+
+    function executeTwilio() {
+        app.get('/TwilioTest/:message', function(req, res) {
+            client.messages.create({
+                body: req.params.message,
+                to: "+12814333931",
+                from: "+18326481745"
+                    // mediaUrl: ""
+            }, function(err, message) {
+                // console.log(err, message)
+                // res.send(messages)
+            });
+            
+        })
+    }
+
+    executeTwilio('/TwilioTest')
 
     // add your proxies here.
     //
