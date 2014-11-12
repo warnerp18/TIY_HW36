@@ -29,6 +29,14 @@
     "express": "^4.10.2",
     "lodash": "^2.4.1",
     "method-override": "^2.3.0",
-    "request": "^2.47.0"
+    "request": "^2.47.0",
+    "twilio": "git://github.com/kwhinnery/twilio-node.git"
+  },
+  "engines": {
+    "node": "0.10.32",
+    "npm": "1.1.x"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }

@@ -8,11 +8,11 @@ window.onload = app;
             {url: "./bower_components/lodash/dist/lodash.min.js"},
             {url: "./bower_components/backbone/backbone.js"},
             {url: "./bower_components/pathjs/path.min.js"},
+            {url: "./bower_components/foundation/js/foundation.js"},
             {url: "./js/ocrad.js"},
             {url: "./js/testOCR.js"},
             {url: "./TwilioTest.js"},
-            {url: "./stuff.js"},
-            {url: "./findName.js"}
+            {url: "./stuff.js"}
         ).then(function(){
             _.templateSettings.interpolate = /{([\s\S]+?)}/g;
 
