@@ -1,4 +1,4 @@
-var twilio = require("twilio");
+var twilio = require("./node_modules/twilio");
 var accountData = require("./stuff.js").data;
 var client = twilio(accountData.sid, accountData.authToken);
  
