@@ -42,12 +42,13 @@ function startServer() {
         app.get('/TwilioTest/:message', function(req, res) {
             client.messages.create({
                 body: req.params.message,
-                to: "+12814333931",
-                from: "+18326481745"
+                to: "+18438192919",
+                from: "+18435588080"
                     // mediaUrl: ""
             }, function(err, message) {
+                 process.stdout.write(message.AC8700e8b6569496d3e8498f2ff02b3b48);
                 // console.log(err, message)
-                // res.send(messages)
+                //res.send(messages)
             });
             
         })
