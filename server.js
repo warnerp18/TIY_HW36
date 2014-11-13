@@ -14,8 +14,14 @@ function startServer() {
     /**
      * LOAD TWILIO STUFF
      */
-    var twilio = require("twilio");
-    var accountData = require("./stuff.js").data;
+    var twilio = require("./node_modules/twilio");
+    var accountData = {
+        authToken: process.env.authToken,
+        sid: process.env.sid
+    };
+    if(!accountData.authToken || !accountData.sid){
+        accountData = require("./stuff.js").data;
+    }
     var client = twilio(accountData.sid, accountData.authToken);
     ////////
 
@@ -48,13 +54,13 @@ function startServer() {
             }, function(err, message) {
                  process.stdout.write(message.AC8700e8b6569496d3e8498f2ff02b3b48);
                 // console.log(err, message)
-                //res.send(messages)
+                res.send(message)
             });
             
         })
     }
 
-    // executeTwilio('/TwilioTest')
+    executeTwilio()
 
     // add your proxies here.
     //
