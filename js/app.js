@@ -1,6 +1,4 @@
-
-    window.onload = app;
-
+window.onload = app;
     // runs when the DOM is loaded
     function app(){
 
@@ -11,6 +9,7 @@
             {url: "./bower_components/backbone/backbone.js"},
             {url: "./bower_components/pathjs/path.min.js"},
             {url: "./bower_components/foundation/js/foundation.js"},
+            {url: "./findName.js"},
             {url: "./js/ocrad.js"},
             {url: "./js/testOCR.js"},
             {url: "./js/firebase.js"}

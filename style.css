@@ -1,0 +1,12 @@
+p + p {
+    text-indent: 0
+}
+.image {
+    position: relative;
+    left: 50%
+}
+
+.left-colum {
+	position: relative;
+	top:2em;
+}
