@@ -17,12 +17,19 @@ function startServer() {
     var twilio = require("./node_modules/twilio");
     var accountData = {
         authToken: process.env.authToken,
-        sid: process.env.sid
+        sid: process.env.sid,
+        phoneNumber: process.env.phoneNumber,
+        twilioPhoneNumber: process.env.twilioPhoneNumber
     };
     if(!accountData.authToken || !accountData.sid){
         accountData = require("./stuff.js").data;
-    }
+    };
     var client = twilio(accountData.sid, accountData.authToken);
+    var bodyParser = require('body-parser');
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }))
     ////////
 
     function querify(queryParamsObject) {
@@ -44,12 +51,12 @@ function startServer() {
         });
     }
 
-    function executeTwilio() {
-        app.get('/TwilioTest/:message', function(req, res) {
+    function sendTwilioSMS() {
+        app.get('/TwilioTest/', function(req, res) {
             client.messages.create({
-                body: req.params.message,
-                to: "+12814333931",
-                from: "+18326481745"
+                body: "You have received a package. Reply yes for home delivery.",
+                to: accountData.phoneNumber,
+                from: accountData.twilioPhoneNumber
                     // mediaUrl: ""
             }, function(err, message) {
                 // console.log(err, message)
@@ -59,7 +66,18 @@ function startServer() {
         })
     }
 
-    executeTwilio()
+    function receiveTwilioSMS() {
+        app.post('/message', function(req, res) {
+            var resp = new twilio.TwimlResponse();
+            resp.message('We will deliver!');
+            res.writeHead(200, {
+                'Content-Type':'text/xml'
+            })
+            res.end(resp.toString());
+        });
+    }
+
+    sendTwilioSMS()
 
     // add your proxies here.
     //

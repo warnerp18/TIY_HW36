@@ -74,7 +74,7 @@
             this.render();
         },
 
-        template: "<li><%= firstName %></li>",
+        template: "<div class='row'><div class='large-12 columns'><a href=#><h4 class=text-center><%= firstName %> at address: <%= address %></h4></a></div></div><hr/>",
         render: function() {
         	console.dir(this.options);
         	console.dir(this.template);
