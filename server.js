@@ -67,7 +67,7 @@ function startServer() {
     }
 
     function receiveTwilioSMS() {
-        app.post('/message', function(req, res) {
+        app.post('/message/', function(req, res) {
             var resp = new twilio.TwimlResponse();
             resp.message('We will deliver!');
             res.writeHead(200, {
