@@ -14,7 +14,7 @@ function startServer() {
     /**
      * LOAD TWILIO STUFF
      */
-    var twilio = require("twilio");
+    var twilio = require("./node_modules/twilio");
     var accountData = require("./stuff.js").data;
     var client = twilio(accountData.sid, accountData.authToken);
     ////////
@@ -47,13 +47,13 @@ function startServer() {
                     // mediaUrl: ""
             }, function(err, message) {
                 // console.log(err, message)
-                // res.send(messages)
+                res.send(message)
             });
             
         })
     }
 
-    // executeTwilio('/TwilioTest')
+    executeTwilio()
 
     // add your proxies here.
     //
