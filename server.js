@@ -14,7 +14,7 @@ function startServer() {
     /**
      * LOAD TWILIO STUFF
      */
-    var twilio = require("./node_modules/twilio");
+    var twilio = require("./twilio");
     var accountData = require("./stuff.js").data;
     var client = twilio(accountData.sid, accountData.authToken);
     ////////
