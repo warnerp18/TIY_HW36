@@ -1,6 +1,6 @@
 var testOCR = function(){
 	var testImage = new Image();
-	testImage.src = '../test.png';
+	testImage.src = document.getElementById("image-file").value;
 
 	var canvas = document.createElement("canvas");
 	canvas.width = 411;

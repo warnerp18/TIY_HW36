@@ -19,7 +19,7 @@ function startServer() {
         authToken: process.env.authToken,
         sid: process.env.sid
     };
-    if(!accountData.authToken || !accountData.sid){
+    if (!accountData.authToken || !accountData.sid) {
         accountData = require("./stuff.js").data;
     }
     var client = twilio(accountData.sid, accountData.authToken);
@@ -44,6 +44,15 @@ function startServer() {
         });
     }
 
+    // var client = twilio('ACCOUNTSID', 'AUTHTOKEN');
+    //     function executeTwilio() {
+    //         client.sendMessage({
+    //             to: "+18438192919",
+    //             from: "+18435588080",
+    //             body: "This is Camden Apartments; your package has arrived at the office."
+    //         }, function(err, data) {});
+    //     },null, true);
+
     function executeTwilio() {
         app.get('/TwilioTest/:message', function(req, res) {
             client.messages.create({
@@ -52,11 +61,11 @@ function startServer() {
                 from: "+18435588080"
                     // mediaUrl: ""
             }, function(err, message) {
-                 process.stdout.write(message.AC8700e8b6569496d3e8498f2ff02b3b48);
+                process.stdout.write(message.sid);
                 // console.log(err, message)
                 res.send(message)
             });
-            
+
         })
     }
 

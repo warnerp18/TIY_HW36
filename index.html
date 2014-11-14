@@ -11,35 +11,58 @@
 
 <body>
     <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
-        
+
     <!-- <a href="/TwilioTest/hello" id="send" class="button">Send SMS</a> -->
     <a href="#" id="send" class="button">Update Data</a>
-    <a href="/TwilioTest/Hello Travis" id="SMS" class="button">Send SMS</a>
+    <a href="/TwilioTest/Hello" id="SMS" class="button">Send SMS</a>
+
+<video id="video" width="640" height="480" autoplay></video>
+<button id="snap">Snap Photo</button>
+<canvas id="canvas" width="640" height="480"></canvas>
 
 
-<form>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>First Name
-        <input name="firstName" type="text" placeholder="First Name" />
-      </label>
-    </div>
-  </div>
-    <div class="row">
-        <div class="large-12 columns">
-            <label>Last Name
-                <input name="lastName" type="text" placeholder="Last Name" />
-            </label>
+   <!--  <form id="file-form" action="handler.php" method="POST">
+        <input type="file" accept="image/*;capture=camera">
+        <button type="submit" id="upload-button">Upload</button>
+    </form>
+
+
+    <form>
+        <input type="file" accept="image/*;capture=camera">
+        <button type="submit" id="upload-button">Upload</button>
+        <video autoplay></video>
+        <img src="">
+        <canvas style="display:none;"></canvas>
+    </form> -->
+
+
+
+
+
+
+    <form>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>First Name
+                    <input name="firstName" type="text" placeholder="First Name" />
+                </label>
+            </div>
         </div>
-  </div>
-    <div class="row">
-        <div class="large-12 columns">
-          <label>Address
-            <input name="address" type="text" placeholder="Address"/>
-          </label>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Last Name
+                    <input name="lastName" type="text" placeholder="Last Name" />
+                </label>
+            </div>
         </div>
-    </div>
-</form>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Address
+                    <input name="address" type="text" placeholder="Address" />
+                </label>
+            </div>
+        </div>
+    </form>
 
     <div class="row">
         <div class="large-12 columns">
@@ -54,9 +77,9 @@
         <div class="large-6 columns">
             <div class="row">
                 <div class="large-10 columns" id="list">
-                <ul id="list">
+                    <ul id="list">
 
-                </ul>
+                    </ul>
                 </div>
             </div>
         </div>
