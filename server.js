@@ -78,6 +78,7 @@ function startServer() {
     }
 
     sendTwilioSMS();
+    
     receiveTwilioSMS();
 
     // add your proxies here.
