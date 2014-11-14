@@ -12,8 +12,7 @@ window.onload = app;
             {url: "./findName.js"},
             {url: "./js/ocrad.js"},
             {url: "./js/testOCR.js"},
-            {url: "./js/firebase.js"},
-            {url: "./captureImage.js"}
+            {url: "./js/firebase.js"}
         ).then(function(){
             _.templateSettings.interpolate = /{([\s\S]+?)}/g;
 
